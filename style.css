@@ -1,0 +1,264 @@
+/* Reseta algumas margens e espaçamentos padrões */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #000000; /* Fundo preto para todo o site */
+  color: #fff; /* Texto branco para contraste */
+}
+
+/* Estilização do Header */
+header {
+  background-color: #000000; /* Fundo preto */
+  padding: 20px 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.navbar .logo a {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff; /* Logo em branco */
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff; /* Links em branco */
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  color: #d5949e; /* Cor de hover rosa */
+}
+
+/* Menu ícone (para mobile, se necessário) */
+.menu-icon {
+  display: none;
+}
+
+/* Estilização da Imagem de Destaque */
+#home .hero-image {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+    color: #fff;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+  }
+}
+
+/* Estilização para a seção Nossos Serviços */
+#servicos {
+  padding: 50px 20px;
+  background-color: #333; /* Fundo cinza escuro para a seção de serviços */
+  text-align: center;
+}
+
+#servicos h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #f7a9b7; /* Título com cor rosa */
+  font-weight: bold;
+}
+
+.servicos-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.servicos {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.servico {
+  width: 30%;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #fff; /* Fundo branco para os serviços */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.servico:hover {
+  transform: translateY(-10px);
+}
+
+.servico-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.servico h3 {
+  font-size: 24px;
+  color: #070101; /* Cor escura para os títulos dos serviços */
+  margin-top: 20px;
+}
+
+.servico p {
+  font-size: 16px;
+  color: #333; /* Cor do texto das descrições dos serviços */
+  margin-top: 10px;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+  .servicos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .servico {
+    width: 80%;
+  }
+}
+/* Estilização para a seção Contato */
+#contato {
+  padding: 50px 20px;
+  background-color: #333; /* Fundo escuro para contraste */
+  text-align: center;
+  color: #fff;
+}
+
+#contato h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #f7a9b7; /* Cor rosa para o título */
+  font-weight: bold;
+}
+
+#contato p {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.contato-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contato-form {
+  background-color: #fff; /* Fundo branco para o formulário */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #f7a9b7; /* Bordas rosa quando em foco */
+}
+
+textarea {
+  resize: vertical;
+}
+
+.btn-contato {
+  background-color: #f7a9b7;
+  color: #fff;
+  font-size: 18px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-contato:hover {
+  background-color: #d5949e; /* Cor de hover no botão */
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+  .contato-form {
+    padding: 15px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 14px;
+  }
+
+  .btn-contato {
+    font-size: 16px;
+  }
+}
